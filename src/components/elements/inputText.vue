@@ -38,18 +38,18 @@
 			</h3>
 		</label>
 		<input
-			type="text"
-			:name="id_name"
-			:id="id_name"
-			class="input-text"
-			v-model="content"
-			:required="isRequired"
-			>
-		<div class="item-add-info">
-			<h5>
-				{{add_info}}
-			</h5>
-		</div>
+				type="text"
+				:name="id_name"
+				:id="id_name"
+				class="input-text"
+				v-model="content"
+				:required="isRequired"
+				>
+				<div class="item-add-info">
+					<h5>
+						{{add_info}}
+					</h5>
+				</div>
 
 	</div>
 </template>

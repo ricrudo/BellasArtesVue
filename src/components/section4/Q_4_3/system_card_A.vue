@@ -13,12 +13,18 @@
   const show = ref(true)
 
   const props = defineProps({
-    clave:{type:Number,
-    required:true},
-    id_name:{type:String,
-    required: true},
-    index: {type:Number,
-required:true}
+    clave:{
+        type:Number,
+        required:true
+        },
+    id_name:{
+        type:String,
+        required: true
+        },
+    index:{
+        type:Number,
+        required:true
+    }
   })
 
   function handleToggle() {
@@ -43,6 +49,7 @@ required:true}
           />
 
       <div class="card-content toggle_show" v-show="show">
+
 
         <InputText
             :id_name="esteID"
