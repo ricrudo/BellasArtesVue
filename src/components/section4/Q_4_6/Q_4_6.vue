@@ -23,16 +23,16 @@
     <div class='form-area '>
 
       <HeaderSection
-          title="4.6"
+          title="4.6 LIBROS Y /O CAPITULOS DE LIBRO PUBLICADOS RESULTADO DE INVESTIGACIÓN CREACIÓN"
           :descriptions="[
-                         'Description1',
-                         'Description2'
+                         'Indica si tienes capítulos o libros publicados (durante este periodo) resultado de investigación creación utilizando el botón “Añadir”'
                          ]"/>
 
 
       <!-- RADIO BUTTON YES NO-->
       <radioYesNoGeneral
           @update="handleRadio"
+          radioID="bool_publicaciones_libros"
           />
 
 
@@ -40,7 +40,7 @@
 
       <ButtonAddElement
           v-if="showQuestion"
-          text=""
+          text="Añdir libro o capítulo"
           @click="addCard"
           />
 
@@ -60,6 +60,10 @@
     </div>
   </form>
 </template>
+
+<style scoped>
+</style>
+
 
 <style scoped>
 </style>
