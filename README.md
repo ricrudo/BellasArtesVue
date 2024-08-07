@@ -37,7 +37,7 @@ npm run test:unit
 ### Documentacion básica
 
 <details>
-<summary>CUADRO TEXTO</summary>
+<summary><b>CUADRO TEXTO</b></summary>
 
 - Script
     
@@ -65,7 +65,7 @@ npm run test:unit
 </details>
         
 <details>
-<summary>DROPDOWN</summary>
+<summary><b>DROPDOWN</b></summary>
 
 - Script
     
@@ -104,7 +104,7 @@ npm run test:unit
 </details>
         
 <details>
-<summary>RADIO MULTIPLE OPTIONS</summary>
+<summary><b>RADIO MULTIPLE OPTIONS</b></summary>
 
 - Script
     
@@ -132,7 +132,7 @@ npm run test:unit
 </details>
         
 <details>
-<summary>FORM BREAK</summary>
+<summary><b>FORM BREAK</b></summary>
     
 - Script
     ```jsx
@@ -142,7 +142,7 @@ npm run test:unit
 </details>
         
 <details>
-<summary>RADIO YES NO (Inside Card)</summary>
+<summary><b>RADIO YES NO (Inside Card)</b></summary>
 
 - Script
     
@@ -164,7 +164,7 @@ npm run test:unit
 </details>
         
 <details>
-<summary>MULTIPLES CUADROS DE TEXTO</summary>
+<summary><b>MULTIPLES CUADROS DE TEXTO</b></summary>
 
 - Script
     
@@ -183,7 +183,7 @@ npm run test:unit
 </details>
         
 <details>
-<summary>BOTÓN BORRAR ELEMENTO</summary>
+<summary><b>BOTÓN BORRAR ELEMENTO</b></summary>
 
 - Script
     
@@ -204,7 +204,7 @@ npm run test:unit
 </details>
         
 <details>
-<summary>BOTÓN AGREGAR ELEMENTO</summary>
+<summary><b>BOTÓN AGREGAR ELEMENTO</b></summary>
 
 - script
     
@@ -233,7 +233,7 @@ npm run test:unit
 </details>
         
 <details>
-<summary>DATE INPUT</summary>
+<summary><b>DATE INPUT</b></summary>
 
 - script
     
@@ -256,7 +256,7 @@ npm run test:unit
 </details>
         
 <details>
-<summary>RADIO MULTIPLE OPTIONS</summary>
+<summary><b>RADIO MULTIPLE OPTIONS</b></summary>
 
 - script
     
@@ -284,7 +284,7 @@ npm run test:unit
 </details>
         
 <details>
-<summary>LONG TEXT</summary>
+<summary><b>LONG TEXT</b></summary>
 
 - script
     
@@ -307,7 +307,7 @@ npm run test:unit
 </details>
         
 <details>
-<summary>CHECKBOX MULTIPLE OPTION</summary>
+<summary><b>CHECKBOX MULTIPLE OPTION</b></summary>
 
 - script
     
