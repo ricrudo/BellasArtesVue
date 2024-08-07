@@ -37,6 +37,7 @@
           {'frh': 'Formación de Recurso Humano en CTeI'},
           ]"
         add_info= "Características de la actividad de la cual el producto es resultado"
+        :isRequired="true"
         :stackClass="false"
       />
 
@@ -47,6 +48,7 @@
         label="Nombre del producto"
         content=""
         add_info= ""
+        :isRequired="true"
         :stackClass="true"
       />
 
@@ -55,6 +57,7 @@
         label="Institución"
         content=""
         add_info= "Institución donde fue exhibido o presentado"
+        :isRequired="true"
         :stackClass="true"
       />
 
@@ -68,6 +71,7 @@
           {'internacional': 'Internacional'},
           ]"
         add_info= ""
+        :isRequired="true"
         :stackClass="true"
       />
 
@@ -87,6 +91,7 @@
         label="Link de difusión o nombre del catálogo"
         content=""
         add_info= "Link de difusión del evento/obra o nombre del catálogo si lo hubiera"
+        :isRequired="true"
         :stackClass="true"
       />
 
@@ -101,6 +106,7 @@
           {'no_responde': 'No ha sido reconocido'},
           ]"
         add_info= ""
+        :isRequired="true"
         :stackClass="true"
       />
 
