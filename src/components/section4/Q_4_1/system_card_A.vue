@@ -40,6 +40,7 @@
           {'tei': 'Teatro, Espacio e Interactividad TEI'}
           ]"
         add_info= ""
+        :isRequired="true"
         :stackClass="true"
       />
 
@@ -54,6 +55,7 @@
           {'artes_plasticas': 'Artes Plásticas'}
           ]"
         add_info= ""
+        :isRequired="true"
         :stackClass="true"
       />
 
