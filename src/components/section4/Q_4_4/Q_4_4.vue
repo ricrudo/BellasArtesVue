@@ -23,16 +23,16 @@
     <div class='form-area '>
 
       <HeaderSection
-          title="4.4"
+          title="4.4 PRODUCTOS DE CREACIÓN"
           :descriptions="[
-                         'Description1',
-                         'Description2'
+                         'Indica si tienes productos de creación y relaciónalos utilizando el botón “Añadir”.'
                          ]"/>
 
 
       <!-- RADIO BUTTON YES NO-->
       <radioYesNoGeneral
           @update="handleRadio"
+          radioID="bool_productos_creacion"
           />
 
 
@@ -40,7 +40,7 @@
 
       <ButtonAddElement
           v-if="showQuestion"
-          text=""
+          text="Añadir producto"
           @click="addCard"
           />
 
