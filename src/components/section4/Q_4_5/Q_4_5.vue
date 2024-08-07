@@ -23,16 +23,16 @@
     <div class='form-area '>
 
       <HeaderSection
-          title="4.5"
+          title="4.5 PUBLICACIÓN DE ARTÍCULOS EN REVISTAS INDEXADAS EN BASES DE DATOS DE ALTO IMPACTO PUBLINDEX, WOS Y SCOPUS"
           :descriptions="[
-                         'Description1',
-                         'Description2'
+                         'Indica si tienes artículos publicados (durante este periodo) y relaciónalos a continuación utilizando el botón “Añadir”.'
                          ]"/>
 
 
       <!-- RADIO BUTTON YES NO-->
       <radioYesNoGeneral
           @update="handleRadio"
+          radioID="bool_publicaciones_articulos"
           />
 
 
@@ -40,7 +40,7 @@
 
       <ButtonAddElement
           v-if="showQuestion"
-          text=""
+          text="Añadir artículo"
           @click="addCard"
           />
 
