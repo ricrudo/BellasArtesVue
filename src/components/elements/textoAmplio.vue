@@ -25,11 +25,20 @@
     stackClass:{
       type:Boolean,
       default:false
+    },
+    popupText: {
+      type:String,
+      required:false,
+      default:""
     }
-	})
+  })
 
 	const content = ref(props.content)
+  const popupState = ref(false)
 
+  function popupToggleShow() {
+    popupState.value = !popupState.value
+  }
 </script>
 
 <template>
@@ -37,7 +46,13 @@
 		<label :for="id_name">
 			<h3 class="label">
 				{{label}}
-			</h3>
+			<span
+        v-if="popupText !== ''"
+        class="info-icon"
+        @click="popupToggleShow">
+        ℹ️
+      </span>
+    </h3>
 		</label>
 		<textarea class="input-text" :id="id_name" :name="id_name" rows="4" required>{{content}}</textarea>
 		<div class="item-add-info">
@@ -45,7 +60,16 @@
 				{{add_info}}
 			</h5>
 		</div>
-	</div>
+	
+    <div class="popup" v-if="popupText !== ''" v-show="popupState">
+      <span
+          class="close-btn"
+          @click="popupToggleShow">
+        &times;
+      </span>
+      <p>{{popupText}}</p>
+    </div>
+  </div>
 </template>
 
 <style scoped>

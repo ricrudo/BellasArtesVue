@@ -1,19 +1,39 @@
 <script setup>
 	import {ref} from 'vue'
 	const props = defineProps({
-		id_name:{type:String,
-		required:false},
-		label:{type:String,
-		required:false},
-		options:{type:Array,
-		required:false},
-		add_info:{type:String,
-		required:false},
-		stackClass:{type:Boolean,
-		default:false}
-	})
+		id_name: {
+      type:String,
+      required:false
+      },
+		label: {
+      type:String,
+		  required:false
+      },
+		options: {
+      type:Array,
+		  required:false
+      },
+		add_info: {
+      type:String,
+      required:false
+      },
+		stackClass: {
+      type:Boolean,
+      default:false
+      },
+    popupText: {
+      type:String,
+      required:false,
+      default:""
+    }
+  })
 
+  const popupState = ref(false)
 	const stackClass = ref(props.stackClass)
+
+  function popupToggleShow() {
+    popupState.value = !popupState.value
+  }
 </script>
 
 <template>
@@ -22,7 +42,13 @@
 		<label :for="id_name">
 			<h3 class="label">
 				{{label}}
-			</h3>
+			<span
+        v-if="popupText !== ''"
+        class="info-icon"
+        @click="popupToggleShow">
+        ℹ️
+      </span>
+    </h3>
 		</label>
 		<select class='input-text' :name="id_name" :id="id_name" required>
 
@@ -36,7 +62,16 @@
 				{{add_info}}
 			</h5>
 		</div>
-	</div>
+	
+    <div class="popup" v-if="popupText !== ''" v-show="popupState">
+      <span
+          class="close-btn"
+          @click="popupToggleShow">
+        &times;
+      </span>
+      <p>{{popupText}}</p>
+    </div>
+  </div>
 </template>
 
 <style scoped>

@@ -1,6 +1,6 @@
 <script setup>
 
-	import {addElement} from '@/utils/utils.js'
+  import {addElement} from '@/utils/utils.js'
   import {ref} from 'vue'
 
   const props = defineProps({
@@ -13,16 +13,17 @@
     type: String,
     required: false,
     default: 'add-card-button'
- },
- entries: {
+  },
+  entries: {
     type:Object,
     required: true 
     },
- keyword: {
+  keyword: {
     type:String,
     required: true 
     }
-})
+  })
+
   const entries = ref(props.entries);
   const keyword = ref(props.keyword);
 
@@ -32,6 +33,7 @@
 
     console.log(entries.value);
   }
+
 </script>
 
 <template>

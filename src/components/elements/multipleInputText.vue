@@ -4,30 +4,59 @@
 	import ButtonAddElement from '@comp/elements/buttonAddElement.vue'
 
 	const props = defineProps ({
-		entries:{type:Object,
-		required:false,
-		default: () =>({1:{id_name:'entry_1',content:''}})},
-		keyword:{type:String,
-		required:true,
-		default:'entry'},
-		textLabel:{type:String,
-		required:false},
-		textAddButton:{type:String,
-		required:false},
-		classesAddButton:{type:String,
-		required:false,
-		default:"add-multiple-text-button"},
-		isRequired:{type:Boolean,
-		default:false},
+		entries:{
+			type:Object,
+			required:false,
+			default: () =>({1:{id_name:'entry_1',content:''}})
+			},
+		keyword:{
+			type:String,
+			required:true,
+			default:'entry'
+			},
+		textLabel:{
+			type:String,
+			required:false
+			},
+		textAddButton:{
+			type:String,
+			required:false
+			},
+		classesAddButton:{
+			type:String,
+			required:false,
+			default:"add-multiple-text-button"
+			},
+		isRequired:{
+			type:Boolean,
+			default:false
+    },
+    popupText: {
+      type:String,
+      required:false,
+      default:""
+    }
 	})
 
 	const entries = ref(props.entries)
+  const popupState = ref(false)
+
+  function popupToggleShow() {
+    popupState.value = !popupState.value
+  }
 
 </script>
 
 <template>
 	<div class="form-item">
-		<p class="label">{{textLabel}}</p>
+		<p class="label">{{textLabel}}
+			<span
+				v-if="popupText !== ''"
+				class="info-icon"
+				@click="popupToggleShow">
+				ℹ️
+			</span>
+		</p>
 		<div>
 			<div v-for="(value, key) in entries" :key="key" class="group-multiple-text group-multiple-text-ROD">
 				<input
@@ -47,6 +76,14 @@
 							<i class="fas fa-trash-alt"></i>
 						</div>
 			</div>
+		</div>
+		<div class="popup" v-if="popupText !== ''" v-show="popupState">
+			<span
+					class="close-btn"
+					@click="popupToggleShow">
+				&times;
+			</span>
+			<p>{{popupText}}</p>
 		</div>
 
 		<ButtonAddElement

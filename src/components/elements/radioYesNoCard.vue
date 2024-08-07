@@ -1,23 +1,41 @@
 <script setup>
 	import { ref } from 'vue'
 
-const props = defineProps({
-radioID: {type:String,
-required:true},
-title: {type: String,
-required: false},
-additional_info: {type: String,
-required: false},
-stackClass:{type:Boolean,
-default:false}
-})
+  const props = defineProps({
+    radioID:{
+      type:String,
+      required:true
+      },
+    title:{
+      type: String,
+      required: false
+      },
+    additional_info:{
+      type: String,
+      required: false
+      },
+    stackClass:{
+      type:Boolean,
+      default:false
+      },
+    popupText:{
+      type:String,
+      required:false,
+      default:""
+    }
+  })
 
-const selectedValue = ref('')
-const emit = defineEmits(['update'])
+  const popupState = ref(false)
+  const selectedValue = ref('')
+  const emit = defineEmits(['update'])
 
-function emitSelection() {
-  emit('update', selectedValue.value)
-}
+  function popupToggleShow() {
+    popupState.value = !popupState.value
+  }
+
+  function emitSelection() {
+    emit('update', selectedValue.value)
+  }
 
 </script>
 
@@ -27,7 +45,13 @@ function emitSelection() {
 		<label for="status_done_1">
 			<h3 class="label">
 				{{title}}
-			</h3>
+			<span
+        v-if="popupText !== ''"
+        class="info-icon"
+        @click="popupToggleShow">
+        ℹ️
+      </span>
+    </h3>
 		</label>
 
 		<div class="radio-options">
@@ -44,7 +68,16 @@ function emitSelection() {
 				{{additional_info}}
 			</h5>
 		</div>
-	</div>
+
+    <div class="popup" v-if="popupText !== ''" v-show="popupState">
+      <span
+          class="close-btn"
+          @click="popupToggleShow">
+        &times;
+      </span>
+      <p>{{popupText}}</p>
+    </div>
+  </div>
 
 </template>
 

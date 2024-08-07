@@ -66,6 +66,7 @@ npm run test:unit
         content="esto es una prueba"
         add_info= "esto lo invente"
         :stackClass="true"
+        popupText=""
     />
     ```
     
@@ -80,6 +81,60 @@ npm run test:unit
     `:stackClass` Agrega la clase stack para que se puedan ver dos elementos en un misma linea
 </details>
         
+<details>
+<summary>
+
+### LONG TEXT
+</summary>
+
+- script
+    
+    ```jsx
+    import LongText from '@comp/elements/textoAmplio.vue'
+    ```
+    
+- template
+    
+    ```jsx
+    <LongText
+        id_name="id_name"
+        label="label"
+        content="value"
+        add_info=""
+        :isRequired="true"
+        :stackClass="true"
+        popupText=""
+    />
+    ```
+</details>
+
+<details>
+<summary>
+
+### DATE INPUT
+</summary>
+
+- script
+    
+    ```jsx
+      import DateInput from '@comp/elements/dateInput.vue'
+    ```
+    
+- template
+    
+    ```jsx
+    <DateInput
+        id_name="id_name"
+        label="el label"
+        value="el value"
+        add_info="la add info"
+        :isRequired="true"
+        :stackClass="true"
+        popupText=""
+    />
+    ```
+</details>
+
 <details>
 <summary>
 
@@ -108,6 +163,7 @@ npm run test:unit
         ]"
         add_info= "esto lo invente"
         :stackClass="true"
+        popupText=""
     />
     
     ```
@@ -147,6 +203,7 @@ npm run test:unit
             {value:'no', text:'No'},
             {value:'espera', text:'En espera de resultados'}
         ]"
+        popupText=""
     />
     ```
     
@@ -156,19 +213,6 @@ npm run test:unit
     `title` El título que muestra en pantalla
 
     `:options` Las opciones de los radios. Es un array de dicts, donde el value=lo que reconoce el formulario y text=lo que muestra en pantalla
-</details>
-        
-<details>
-<summary>
-
-### FORM BREAK
-</summary>
-    
-- Script
-    ```jsx
-    <div class="form-break"></div>
-    ```
-    
 </details>
         
 <details>
@@ -192,10 +236,73 @@ npm run test:unit
         title="¿El proyecto cuenta con la participación algún semillero de investigación?" 
         additional_info=""
         :stackClass="true"
+        popupText=""
         />
     ```
 </details>
         
+<details>
+<summary>
+
+### RADIO MULTIPLE OPTIONS
+</summary>
+
+- script
+    
+    ```jsx
+      import RadioMultipleOptions from '@comp/elements/radioMultipleOptions.vue'
+    ```
+    
+- template
+    
+    ```jsx
+    <RadioMultipleOptions
+        radioID="esteID"
+        title="¿El proyecto fue elegido?"
+        :options="[
+        {value:'si', text:'Si'},
+        {value:'no', text:'No'},
+        {value:'espera', text:'En espera de resultados'}
+        ]"
+        additional_info="info"
+        :isRequired="true"
+        :stackClass="true"
+        popupText=""
+    />
+    ```
+        
+</details>
+
+<details>
+<summary>
+
+### CHECKBOX MULTIPLE OPTION
+</summary>
+
+- script
+    
+    ```jsx
+      import CheckBoxMultiple from '@comp/elements/checkboxMultipleOption.vue'
+    ```
+    
+- template
+    
+    ```jsx
+    <CheckBoxMultiple
+        id_name="esteID"
+        label="este checkbox"
+        :options="[
+        {id_name:'id1', text:'opt1'},
+        {id_name:'id2', text:'opt2'},
+        ]"
+        add_info=""
+        :isRequired="true"
+        :stackClass="true"
+        popupText=""
+    />
+    ```
+</details>
+
 <details>
 <summary>
 
@@ -215,6 +322,7 @@ npm run test:unit
         id_name="esteID"
         textLabel="Lista todos los nombres de los estudiantes con el botón &quot;Añadir&quot;"
         textAddButton="+ Añadir estudiante"
+        popupText=""
     />
     ```
 </details>
@@ -278,111 +386,12 @@ npm run test:unit
 <details>
 <summary>
 
-### DATE INPUT
+### FORM BREAK
 </summary>
-
-- script
     
+- Script
     ```jsx
-      import DateInput from '@comp/elements/dateInput.vue'
+    <div class="form-break"></div>
     ```
     
-- template
-    
-    ```jsx
-    <DateInput
-        id_name="id_name"
-        label="el label"
-        value="el value"
-        add_info="la add info"
-        :isRequired="true"
-        :stackClass="true"
-    />
-    ```
-</details>
-        
-<details>
-<summary>
-
-### RADIO MULTIPLE OPTIONS
-</summary>
-
-- script
-    
-    ```jsx
-      import RadioMultipleOptions from '@comp/elements/radioMultipleOptions.vue'
-    ```
-    
-- template
-    
-    ```jsx
-    <RadioMultipleOptions
-        radioID="esteID"
-        title="¿El proyecto fue elegido?"
-        :options="[
-        {value:'si', text:'Si'},
-        {value:'no', text:'No'},
-        {value:'espera', text:'En espera de resultados'}
-        ]"
-        additional_info="info"
-        :isRequired="true"
-        :stackClass="true"
-    />
-    ```
-        
-</details>
-        
-<details>
-<summary>
-
-### LONG TEXT
-</summary>
-
-- script
-    
-    ```jsx
-    import LongText from '@comp/elements/textoAmplio.vue'
-    ```
-    
-- template
-    
-    ```jsx
-    <LongText
-        id_name="id_name"
-        label="label"
-        content="value"
-        add_info=""
-        :isRequired="true"
-        :stackClass="true"
-    />
-    ```
-</details>
-        
-<details>
-<summary>
-
-### CHECKBOX MULTIPLE OPTION
-</summary>
-
-- script
-    
-    ```jsx
-      import CheckBoxMultiple from '@comp/elements/checkboxMultipleOption.vue'
-    ```
-    
-- template
-    
-    ```jsx
-    <CheckBoxMultiple
-        id_name="esteID"
-        label="este checkbox"
-        :options="[
-        {id_name:'id1', text:'opt1'},
-        {id_name:'id2', text:'opt2'},
-        ]"
-        add_info=""
-        :isRequired="true"
-        :stackClass="true"
-    />
-    ```
 </details>

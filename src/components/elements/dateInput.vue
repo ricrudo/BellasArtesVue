@@ -25,10 +25,20 @@
     stackClass:{
       type:Boolean,
       default:false
+    },
+    popupText: {
+      type:String,
+      required:false,
+      default:""
     }
   })
-  
+
+  const popupState = ref(false)
   const value = ref(props.value)
+
+  function popupToggleShow() {
+    popupState.value = !popupState.value
+  }
 
 </script>
 
@@ -37,7 +47,13 @@
     <label :for="id_name">
       <h3 class="label">
 	{{label}}
-      </h3>
+      <span
+        v-if="popupText !== ''"
+        class="info-icon"
+        @click="popupToggleShow">
+        ℹ️
+      </span>
+    </h3>
     </label>
     <input 
       type="date" 
@@ -50,7 +66,16 @@
     <div class="item-add-info">
     <h5></h5>
     </div>
-  </div>
+  
+        <div class="popup" v-if="popupText !== ''" v-show="popupState">
+          <span
+              class="close-btn"
+              @click="popupToggleShow">
+            &times;
+          </span>
+          <p>{{popupText}}</p>
+        </div>
+</div>
 
 </template>
 

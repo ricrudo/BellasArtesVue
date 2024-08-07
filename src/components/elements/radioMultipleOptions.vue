@@ -25,12 +25,21 @@
     stackClass:{
       type:Boolean,
       default:false
+    },
+    popupText: {
+      type:String,
+      required:false,
+      default:""
     }
   })
 
-
+  const popupState = ref(false)
   const selectedValue = ref('')
   const emit = defineEmits(['update'])
+
+  function popupToggleShow() {
+    popupState.value = !popupState.value
+  }
 
   function emitSelection() {
     emit('update', selectedValue.value)
@@ -45,7 +54,13 @@
     <label for="status_done_1">
       <h3 class="label">
         {{title}}
-      </h3>
+      <span
+        v-if="popupText !== ''"
+        class="info-icon"
+        @click="popupToggleShow">
+        ℹ️
+      </span>
+    </h3>
     </label>
 
     <div class="radio-options">
@@ -59,7 +74,16 @@
         {{additional_info}}
       </h5>
     </div>
-  </div>
+  
+    <div class="popup" v-if="popupText !== ''" v-show="popupState">
+      <span
+          class="close-btn"
+          @click="popupToggleShow">
+        &times;
+      </span>
+      <p>{{popupText}}</p>
+    </div>
+</div>
 
 </template>
 

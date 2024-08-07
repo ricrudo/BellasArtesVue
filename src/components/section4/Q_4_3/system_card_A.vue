@@ -9,6 +9,8 @@
   import MultipleInputText from '@comp/elements/multipleInputText.vue'
   import ButtonRemove from '@comp/elements/buttonRemove.vue'
 
+  import CheckBoxMultiple from '@comp/elements/checkboxMultipleOption.vue'
+
   const showSemilleros = ref(false)
   const show = ref(true)
 
@@ -49,7 +51,6 @@
           />
 
       <div class="card-content toggle_show" v-show="show">
-
 
         <InputText
             :id_name="esteID"

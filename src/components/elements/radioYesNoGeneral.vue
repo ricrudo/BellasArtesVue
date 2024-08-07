@@ -1,17 +1,19 @@
 <script setup>
 	import { ref } from 'vue'
 
-const selectedValue = ref('')
-const emit = defineEmits(['update'])
+  const props = defineProps({
+  radioID:{
+    type:String,
+    required:true
+    }
+  })
 
-function emitSelection() {
-  emit('update', selectedValue.value)
-}
+  const selectedValue = ref('')
+  const emit = defineEmits(['update'])
 
-defineProps({
-radioID: {type:String,
-required:true}
-})
+  function emitSelection() {
+    emit('update', selectedValue.value)
+  }
 </script>
 
 <template>

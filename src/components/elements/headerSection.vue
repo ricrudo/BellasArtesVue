@@ -1,16 +1,17 @@
 <script setup>
 	defineProps({
 		title: {
-		type: String,
-		required: false
-		},
+			type: String,
+			required: false
+			},
 		descriptions: {
-		type: Array,
-		required: false
-		},
+			type: Array,
+			required: false
+			},
 		br:{type:Number,
-		required:false,
-		default:0}
+			required:false,
+			default:0
+			}
 	})
 </script>
 
@@ -22,7 +23,7 @@
 
 		<div class="my-br" v-for="n in br" :key="n"/>
 
-		</div>
+	</div>
 </template>
 
 <style scoped>
