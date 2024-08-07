@@ -23,16 +23,16 @@
     <div class='form-area '>
 
       <HeaderSection
-          title="IIDD"
+          title="4.1 PARTICIPACIÓN EN GRUPOS DE INVESTIGACIÓN (Avalados por la universidad del Atlántico)"
           :descriptions="[
-                         'Description1',
-                         'Description2'
+                         'Por favor, indica si has participado en grupos de investigación y lístalos todos a continuación con el botón “Añadir”.'
                          ]"/>
 
 
       <!-- RADIO BUTTON YES NO-->
       <radioYesNoGeneral
           @update="handleRadio"
+          radioID="bool_grupos"
           />
 
 
@@ -40,7 +40,7 @@
 
       <ButtonAddElement
           v-if="showQuestion"
-          text=""
+          text="Añadir grupo"
           @click="addCard"
           />
 
@@ -63,3 +63,4 @@
 
 <style scoped>
 </style>
+
