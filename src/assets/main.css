@@ -29,8 +29,6 @@ box-sizing: border-box; /* Incluye el padding y el border en el cálculo del anc
    
 }
 
-
-
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 500;
 
@@ -73,17 +71,6 @@ h6 {
 	margin-bottom: 16px;
 }
 
-.no-select {
-  -webkit-user-select: none; /* Safari y Chrome */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Otros navegadores modernos */
-}
-
-.my-br {
-height: 20px; /* Ajusta este valor según el espacio que necesites */
-  width: 100%;
-}
 
 
  /*Conditional fields*/
@@ -408,25 +395,31 @@ margin-right: 5px;
 }
 
 
-/*Assitional info pop up*/ 
+/*Additional info pop up*/ 
  .info-icon {
       margin-left: 5px;
       cursor: pointer;
       color: blue;
     }
     .popup {
+      display: none;
     position: absolute;
+    top: 12px;
     left: 0;
     background-color: #ecece4;
     border: 1px solid #ccc;
     padding: 14px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    margin: 0px 30px;
     border-radius: 21px;
     width: 53%;
     font-size: 12px;
 
-	display: flex;
+    }
+
+    .popup.visible {
+      display: flex;
     right: 10px;
     margin: auto;
     top: -200%;
@@ -506,6 +499,7 @@ margin-right: 5px;
     font-weight: 500;
     text-transform: none;
     text-wrap: wrap;
+    overflow: hidden;
 
 }
 
@@ -518,12 +512,6 @@ margin-right: 5px;
 
 }
 
-.card-subtitle {
-    color: white;
-    font-size: 12px;
-    font-weight: 400;
-
-}
 .card-subtittle {
     color: white;
     font-size: 12px;
@@ -615,6 +603,7 @@ box-shadow: 0 0.1rem 0.3rem hsl(200 50% 20% / 20%);
 	box-shadow: 0 0.1rem 1rem hsl(200 50% 20% / 20%);
 	margin-top: 20px;
 	}
+
 
 .add-multiple-text-button:hover {
 transform: scale(1.03) ;
@@ -853,3 +842,64 @@ transform: scale(0.99) ;
 	padding: 10px 0;
 	border-radius: 0 0 8px 8px;
 }
+
+
+
+
+
+/*FILR UPLOAD*/
+
+   .file-upload {
+                   position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: white;
+    width: 100%;
+    padding: 5px 5px 5px 15px;
+}
+        
+
+.file-upload input[type="file"] {
+    display: none; /* Ocultar el input de tipo file */
+}
+
+.file-upload label {
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    padding: 4px 0px 4px 8px;
+	    background-color: #37c480;
+	    color: white;
+	    border-radius: 5px;
+	    cursor: pointer;
+	    font-size: 16px;
+	}
+
+.file-upload label i {
+            margin-right: 8px;
+        }
+
+.file-upload label:hover {
+            background-color: #37c480;
+        }
+
+.file-name {
+	    margin-top: 5px;
+	    margin-bottom: 5px;
+	    font-style: italic;
+	    color: #707070;
+	    background-color: rgb(255, 255, 255);
+	    font-family: 'Montserrat', sans-serif;
+	    font-size: 14px !important;
+	    display: inline-block; /* Para asegurar que el span se comporte como un contenedor */
+	    max-width: 80%; /* Ajusta el tamaño máximo según tus necesidades */
+	    overflow: hidden; /* Oculta el contenido que desborda el contenedor */
+	    text-overflow: ellipsis; /* Agrega puntos suspensivos al final del texto si es demasiado largo */
+	    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+	    vertical-align: middle; /* Alinea verticalmente con el input */
+}
+
+
+
