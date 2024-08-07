@@ -1,6 +1,13 @@
 # BellasArtes2_frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+Este archivo describe por un lado los procesos posibles con VUE que son útiles para el desarrollo y por otro líneas de codigo que se pueden pegar en un archivo de aquellos elementos que la app necesita
+
+<details>
+<summary>
+
+# NPM, VUE and NODE configuration and process 
+
+</summary>
 
 ## Recommended IDE Setup
 
@@ -35,9 +42,14 @@ npm run test:unit
 ```
 
 ### Documentacion básica
+</details>
 
 <details>
-<summary><b>CUADRO TEXTO</b></summary>
+<summary>
+
+### CUADRO TEXTO
+
+</summary>
 
 - Script
     
@@ -49,23 +61,31 @@ npm run test:unit
     
     ```jsx
     <InputText
-            id_name="esteID"
-            label="Nombre de la asignatura"
-            content="esto es una prueba"
-            add_info= "esto lo invente"
-            :stackClass="true"
+        id_name="esteID"
+        label="Nombre de la asignatura"
+        content="esto es una prueba"
+        add_info= "esto lo invente"
+        :stackClass="true"
     />
     ```
     
     `id_name` El id y nombre del elemento para que reconocerá el formulario
+
     `label` El texto que muestra en pantalla
+
     `content` El contenido dentro del cuadro de texto
+
     `add_info` Información adicional
+
     `:stackClass` Agrega la clase stack para que se puedan ver dos elementos en un misma linea
 </details>
         
 <details>
-<summary><b>DROPDOWN</b></summary>
+<summary>
+
+### DROPDOWN
+
+</summary>
 
 - Script
     
@@ -77,17 +97,17 @@ npm run test:unit
     
     ```jsx
     <DropdownList
-            id_name="cardID"
-            label="'Programa ' + cardID"
-            :options="[
-                    {'lic': 'Licenciatura en música'},
-                    {'musica': 'Música'},
-                    {'dram': 'Arte dramático'},
-                    {'Danza': 'Danza'},
-                    {'plas': 'Artes Plásticas'}
-                    ]"
-            add_info= "esto lo invente"
-            :stackClass="true"
+        id_name="cardID"
+        label="'Programa ' + cardID"
+        :options="[
+            {'lic': 'Licenciatura en música'},
+            {'musica': 'Música'},
+            {'dram': 'Arte dramático'},
+            {'Danza': 'Danza'},
+            {'plas': 'Artes Plásticas'}
+        ]"
+        add_info= "esto lo invente"
+        :stackClass="true"
     />
     
     ```
@@ -104,7 +124,11 @@ npm run test:unit
 </details>
         
 <details>
-<summary><b>RADIO MULTIPLE OPTIONS</b></summary>
+<summary>
+
+### RADIO MULTIPLE OPTIONS
+
+</summary>
 
 - Script
     
@@ -116,23 +140,29 @@ npm run test:unit
     
     ```jsx
     <RadioMultipleOptions
-            radioID="esteID"
-            title="¿El proyecto fue elegido?"
-            :options="[{value:'si', text:'Si'},
+        radioID="esteID"
+        title="¿El proyecto fue elegido?"
+        :options="[
+            {value:'si', text:'Si'},
             {value:'no', text:'No'},
             {value:'espera', text:'En espera de resultados'}
-            ]"
+        ]"
     />
     ```
     
 
     `radioID` El id y nombre del elemento para que reconocerá el formulario
+
     `title` El título que muestra en pantalla
+
     `:options` Las opciones de los radios. Es un array de dicts, donde el value=lo que reconoce el formulario y text=lo que muestra en pantalla
 </details>
         
 <details>
-<summary><b>FORM BREAK</b></summary>
+<summary>
+
+### FORM BREAK
+</summary>
     
 - Script
     ```jsx
@@ -142,7 +172,10 @@ npm run test:unit
 </details>
         
 <details>
-<summary><b>RADIO YES NO (Inside Card)</b></summary>
+<summary>
+
+### RADIO YES NO (Inside Card)
+</summary>
 
 - Script
     
@@ -154,17 +187,20 @@ npm run test:unit
     
     ```jsx
     <RadioYesNoCard 
-            @update="handleRadio"
-            radioID="esteRadio"
-            title="¿El proyecto cuenta con la participación algún semillero de investigación?" 
-            additional_info=""
-            :stackClass="true"
-    />
+        @update="handleRadio"
+        radioID="esteRadio"
+        title="¿El proyecto cuenta con la participación algún semillero de investigación?" 
+        additional_info=""
+        :stackClass="true"
+        />
     ```
 </details>
         
 <details>
-<summary><b>MULTIPLES CUADROS DE TEXTO</b></summary>
+<summary>
+
+### MULTIPLES CUADROS DE TEXTO
+</summary>
 
 - Script
     
@@ -176,14 +212,18 @@ npm run test:unit
     
     ```jsx
     <MultipleInputText
-            id_name="esteID"
-            textLabel="Lista todos los nombres de los estudiantes con el botón &quot;Añadir&quot;"
-            textAddButton="+ Añadir estudiante"/>
+        id_name="esteID"
+        textLabel="Lista todos los nombres de los estudiantes con el botón &quot;Añadir&quot;"
+        textAddButton="+ Añadir estudiante"
+    />
     ```
 </details>
         
 <details>
-<summary><b>BOTÓN BORRAR ELEMENTO</b></summary>
+<summary>
+
+### BOTÓN BORRAR ELEMENTO
+</summary>
 
 - Script
     
@@ -195,8 +235,8 @@ npm run test:unit
     
     ```jsx
     <ButtonRemove
-            @click="emitCardID"
-            text="Borrar proyecto"
+        @click="emitCardID"
+        text="Borrar proyecto"
     />
     ```
     
@@ -204,7 +244,10 @@ npm run test:unit
 </details>
         
 <details>
-<summary><b>BOTÓN AGREGAR ELEMENTO</b></summary>
+<summary>
+
+### BOTÓN AGREGAR ELEMENTO
+</summary>
 
 - script
     
@@ -216,10 +259,10 @@ npm run test:unit
     
     ```jsx
     <ButtonAddElement
-            text="textAddButton"
-            classes="add-multiple-text-button"
-            entries="entries"
-            keyword="keyword"
+        text="textAddButton"
+        classes="add-multiple-text-button"
+        entries="entries"
+        keyword="keyword"
     />
     ```
     
@@ -233,7 +276,10 @@ npm run test:unit
 </details>
         
 <details>
-<summary><b>DATE INPUT</b></summary>
+<summary>
+
+### DATE INPUT
+</summary>
 
 - script
     
@@ -251,12 +297,15 @@ npm run test:unit
         add_info="la add info"
         :isRequired="true"
         :stackClass="true"
-            />
+    />
     ```
 </details>
         
 <details>
-<summary><b>RADIO MULTIPLE OPTIONS</b></summary>
+<summary>
+
+### RADIO MULTIPLE OPTIONS
+</summary>
 
 - script
     
@@ -268,23 +317,26 @@ npm run test:unit
     
     ```jsx
     <RadioMultipleOptions
-      radioID="esteID"
-      title="¿El proyecto fue elegido?"
-      :options="[
-                                              {value:'si', text:'Si'},
-                {value:'no', text:'No'},
-                {value:'espera', text:'En espera de resultados'}
-                ]"
-      additional_info="info"
-      :isRequired="true"
-      :stackClass="true"
-      />
+        radioID="esteID"
+        title="¿El proyecto fue elegido?"
+        :options="[
+        {value:'si', text:'Si'},
+        {value:'no', text:'No'},
+        {value:'espera', text:'En espera de resultados'}
+        ]"
+        additional_info="info"
+        :isRequired="true"
+        :stackClass="true"
+    />
     ```
         
 </details>
         
 <details>
-<summary><b>LONG TEXT</b></summary>
+<summary>
+
+### LONG TEXT
+</summary>
 
 - script
     
@@ -295,19 +347,22 @@ npm run test:unit
 - template
     
     ```jsx
-                    <LongText
-                            id_name="id_name"
-                            label="label"
-                            content="value"
-                            add_info=""
-                :isRequired="true"
-                :stackClass="true"
-        />
+    <LongText
+        id_name="id_name"
+        label="label"
+        content="value"
+        add_info=""
+        :isRequired="true"
+        :stackClass="true"
+    />
     ```
 </details>
         
 <details>
-<summary><b>CHECKBOX MULTIPLE OPTION</b></summary>
+<summary>
+
+### CHECKBOX MULTIPLE OPTION
+</summary>
 
 - script
     
@@ -322,12 +377,12 @@ npm run test:unit
         id_name="esteID"
         label="este checkbox"
         :options="[
-                 {id_name:'id1', text:'opt1'},
-                 {id_name:'id2', text:'opt2'},
+        {id_name:'id1', text:'opt1'},
+        {id_name:'id2', text:'opt2'},
         ]"
         add_info=""
         :isRequired="true"
         :stackClass="true"
-      />
+    />
     ```
 </details>
