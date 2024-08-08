@@ -63,21 +63,19 @@
       v-model="content"
       :required="isRequired"
       >
-      <div class="item-add-info">
-        <h5>
-          {{add_info}}
-        </h5>
-      </div>
-
-
-      <div class="popup" v-if="popupText !== ''" v-show="popupState">
-        <span
-            class="close-btn"
-            @click="popupToggleShow">
-          &times;
-        </span>
-        <p>{{popupText}}</p>
-      </div>
+    <div class="item-add-info">
+      <h5>
+        {{add_info}}
+      </h5>
+    </div>
+    <div class="popup" v-if="popupText !== ''" v-show="popupState">
+      <span
+          class="close-btn"
+          @click="popupToggleShow">
+        &times;
+      </span>
+      <p>{{popupText}}</p>
+    </div>
   </div>
 </template>
 

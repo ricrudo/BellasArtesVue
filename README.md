@@ -386,6 +386,49 @@ npm run test:unit
 <details>
 <summary>
 
+### BOTÓN CARGAR DOCUMENTO/ARCHIVO
+</summary>
+
+- script
+    
+    ```jsx
+  import UploadBox from '@comp/elements/uploadButton.vue'
+    ```
+    
+- Template
+    
+    ```jsx
+    <UploadBox
+        id_name="id_name"
+        label=""
+        filename=""
+        :filenameLengthLimit="90"
+        add_info=""
+        :isRequired="true"
+        :stackClass="false"
+        popupText=""
+    />
+    ```
+    
+    `id_name` el id del elemento
+    
+    `label` El texto que va en el label el elemento
+    
+    `filename` el nombre del archivo si la base de datos lo carga 
+    
+    `filenameLengthLimit` cuantas letras máximo muestra del nombre del archivo 
+
+    `add_info` el bloque de información adicional debajo del elemento
+
+    `isRequired` Indica si es un campo obligatorio. "true" o "false" son las unicas opciones
+
+    `stackClass` Indica si el elemento se presenta en stack. "true" o "false" son las unicas opciones 
+
+    `popupText` El texto de es que lleva un popup. Si esta campo esta vació no se mostrará la opción de popup
+</details>
+<details>
+<summary>
+
 ### FORM BREAK
 </summary>
     

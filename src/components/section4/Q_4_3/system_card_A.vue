@@ -10,6 +10,7 @@
   import ButtonRemove from '@comp/elements/buttonRemove.vue'
 
   import CheckBoxMultiple from '@comp/elements/checkboxMultipleOption.vue'
+  import UploadBox from '@comp/elements/uploadButton.vue'
 
   const showSemilleros = ref(false)
   const show = ref(true)
@@ -53,7 +54,7 @@
       <div class="card-content toggle_show" v-show="show">
 
         <InputText
-            :id_name="esteID"
+            id_name="esteID"
             label="Nombre del proyecto"
             content=""
             add_info= ""
@@ -62,7 +63,7 @@
             />
 
         <InputText
-            :id_name="esteID"
+            id_name="esteID"
             label="Código de radicado"
             content=""
             add_info= ""
@@ -71,7 +72,7 @@
             />
 
         <DropdownList
-            :id_name="cardID"
+            id_name="cardID"
             label="Tipo de convocatoria"
             :options="[
                       {'interna': 'Interna'},
@@ -82,7 +83,7 @@
             />
 
         <InputText
-            :id_name="esteID"
+            id_name="esteID"
             label="Nombre de la convocatoria"
             content=""
             add_info= ""
@@ -91,7 +92,7 @@
             />
 
         <DropdownList
-            :id_name="cardID"
+            id_name="cardID"
             label="Tipo de participación"
             :options="[
                       {'principal': 'Investigador/a principal'},
@@ -102,7 +103,7 @@
             />
 
         <InputText
-            :id_name="esteID"
+            id_name="esteID"
             label="Entidad financiadora"
             content=""
             add_info= ""
